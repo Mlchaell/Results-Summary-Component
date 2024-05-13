@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+<body>
+  <article>
+    <section class="results">
+      <p class="results__title">Your Result</p>
+      <div class="results__circle">
+        <span class="results__score">76</span>
+        <span class="results__max">of 100</span>
+      </div>
+      <p class="results__word-score">Great</p>
+      <p class="results__description">Your performance exceeded 65% of the people conducting the test here!</p>
+    </section>
+
+    <section class="summary">
+      <h2 class="summary__heading">Summary</h2>
+
+      <div class="summary__card card1">
+        <div class="col1">
+          <img src="assets/images/icon-reaction.svg" alt="">
+          <p>Reaction</p>
+        </div>
+        <div class="col2">
+          <p>80 <span>/ 100</span></p>
+        </div>
+      </div>
+
+      <div class="summary__card card2">
+        <div class="col1">
+          <img src="assets/images/icon-memory.svg" alt="">
+          <p>Memory</p>
+        </div>
+        <div class="col2">
+          <p>92 <span>/ 100</span></p>
+        </div>
+      </div>
+
+      <div class="summary__card card3">
+        <div class="col1">
+          <img src="assets/images/icon-verbal.svg" alt="">
+          <p>Verbal</p>
+        </div>
+        <div class="col2">
+          <p>61 <span>/ 100</span></p>
+        </div>
+      </div>
+
+      <div class="summary__card card4">
+        <div class="col1">
+          <img src="assets/images/icon-visual.svg" alt="">
+          <p>Visual</p>
+        </div>
+        <div class="col2">
+          <p>73 <span>/ 100</span></p>
+        </div>
+      </div>
+
+      <button class="summary__button">Continue</button>
+    </section>
+  </article>
+</body>
+</html>

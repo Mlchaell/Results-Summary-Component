@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --light-red-hsl: 0, 100%, 67%;
+  --light-red: hsl(var(--light-red-hsl));
+
+  --orange-yellow-hsl: 39, 100%, 56%;
+  --orange-yellow: hsl(var(--orange-yellow-hsl));
+
+  --green-teal-hsl: 166, 100%, 37%;
+  --green-teal: hsl(var(--green-teal-hsl));
+
+  --cobalt-blue-hsl: 234, 85%, 45%;
+  --cobalt-blue: hsl(var(--cobalt-blue-hsl));
+
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --gray-blue: hsl(224, 30%, 27%);
+
+  --bg-slate-blue: hsl(252, 100%, 67%);
+  --bg-royal-blue: hsl(241, 81%, 54%);
+
+  --circle-violet-blue: hsla(256, 72%, 46%, 1);
+  --circle-persian-blue: hsla(241, 72%, 46%, 0);
+
+  --ff-main: "Hanken Grotesk", sans-serif;
+  --fw-extra-bold: 800;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-reg: 400;
+}
+
+/* CSS Reset: https://piccalil.li/blog/a-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  min-height: 100vh;
+
+  font-family: var(--fw-main);
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 
+================
+Main CSS
+================
+*/
+
+body {
+  font-family: var(--ff-main);
+}
+
+@media only screen and (min-width: 850px) {
+  body {
+    display: flex;
+    align-items: center;
+    background-color: var(--pale-blue);
+  }
+
+  article {
+    display: flex;
+    background-color: #fff;
+    border-radius: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* 
+================
+Results CSS
+================
+*/
+
+.results {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  color: #fff;
+  background: linear-gradient(180deg, var(--bg-slate-blue) 0%, var(--bg-royal-blue) 100%);
+  padding: 1rem 0;
+}
+
+@media only screen and (min-width: 850px) {
+  .results {
+    border-radius: 2rem;
+    max-width: 50%;
+    padding: 2rem;
+  }
+}
+
+.results__circle {
+  background: linear-gradient(180deg, var(--bg-royal-blue) 0%, var(--bg-slate-blue) 100%);
+  max-width: 50%;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 1rem auto;
+}
+
+@media only screen and (min-width: 850px) {
+  .results__circle {
+    max-width: none;
+  }
+}
+
+.results__title {
+  font-size: 1.3rem;
+  color: var(--light-lavender);
+  font-weight: var(--fw-extra-bold);
+}
+
+.results__circle {
+  display: flex;
+  flex-direction: column;
+}
+
+.results__score {
+  font-size: 5.6rem;
+}
+
+.results__max {
+  line-height: 0;
+  padding-bottom: 1rem;
+}
+
+.results__word-score {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.results__description {
+  color: var(--light-lavender);
+  font-weight: var(--fw-medium);
+}
+
+/*
+================
+Summary CSS
+================
+*/
+
+.summary {
+  margin-top: 1rem;
+  padding: 0 2rem;
+}
+
+@media only screen and (min-width: 850px) {
+  .summary {
+    min-width: 50%;
+  }
+}
+
+.summary__heading {
+  font-size: 1.4rem;
+  color: var(--gray-blue);
+}
+
+.summary__card {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  padding: .5rem .8rem;
+}
+
+.col1 {
+  display: flex;
+}
+
+.col1 p {
+  font-weight: var(--fw-medium);
+  margin-left: .4rem;
+}
+
+.col2 p {
+  color: var(--gray-blue);
+  font-weight: var(--fw-extra-bold);
+}
+
+.col2 span {
+  color: #9f9f9f;
+  font-weight: var(--fw-bold);
+}
+
+.card1 {
+  background-color: hsl(var(--light-red-hsl), 10%);
+}
+
+.card1 .col1 p {
+  color: var(--light-red);
+}
+
+.card2 {
+  background-color: hsl(var(--orange-yellow-hsl), 10%);
+}
+
+.card2 .col1 p {
+  color: var(--orange-yellow);
+}
+
+.card3 {
+  background-color: hsl(var(--green-teal-hsl), 10%);
+}
+
+.card3 .col1 p {
+  color: var(--green-teal);
+}
+
+.card4 {
+  background-color: hsl(var(--cobalt-blue-hsl), 10%);
+}
+
+.card4 .col1 p {
+  color: var(--cobalt-blue);
+}
+
+.summary__button {
+  background-color: var(--gray-blue);
+  border: none;
+  border-radius: 2rem;
+  min-width: 100%;
+  padding: .5rem 0;
+  margin-top: 1rem;
+
+  color: #fff;
+  font-weight: var(--fw-extra-bold);
+}
+
+.summary__button:hover {
+  cursor: pointer;
+  background: linear-gradient(180deg, var(--bg-slate-blue) 0%, var(--bg-royal-blue) 100%);
+}
